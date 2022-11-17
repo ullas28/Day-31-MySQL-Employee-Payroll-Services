@@ -14,3 +14,8 @@ ALTER table payroll_service.employee_payroll rename column salary to basic_pay;
 ALTER table payroll_service.employee_payroll add deductions int not null after basic_pay; 
 ALTER table payroll_service.employee_payroll add taxablePay int not null after deductions;
 ALTER table payroll_service.employee_payroll add netPay int not null after taxablePay;
+insert into employee_payroll(id, name, phone_number, address, department, gender, basic_pay, deductions, taxablePay, netPay, incomeTax, start) values
+     (121,'terisa','4512474562','TBD','Marketing','F',3000000.00,1000000.00,3000000.00,500000.00,50000.00,'2019-11-13');
+insert into employee_payroll(id, name, phone_number, address, department, gender, basic_pay, deductions, taxablePay, netPay, incomeTax, start) values
+     (122,'terisa','4512474562','TBD','Sales','F',2000000.00,5000000.00,300000.00,400000.00,50000.00,'2019-11-13');
+SELECT * FROM payroll_service.employee_payroll;

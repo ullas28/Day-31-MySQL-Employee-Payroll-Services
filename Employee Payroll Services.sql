@@ -19,3 +19,4 @@ insert into employee_payroll(id, name, phone_number, address, department, gender
 insert into employee_payroll(id, name, phone_number, address, department, gender, basic_pay, deductions, taxablePay, netPay, incomeTax, start) values
      (122,'terisa','4512474562','TBD','Sales','F',2000000.00,5000000.00,300000.00,400000.00,50000.00,'2019-11-13');
 SELECT * FROM payroll_service.employee_payroll;
+Alter table payroll_service.employee_payroll rename COLUMN id to empid;

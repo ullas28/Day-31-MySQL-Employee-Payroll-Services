@@ -27,3 +27,12 @@ insert into employee_payroll(empid, name, phone_number, address, department, gen
      (124,'Sayyed','451092474562','TBD','HR','M',2000000.00,5000000.00,300000.00,400000.00,50000.00,'2022-11-13');
 insert into employee_department (employee_id, department_id) values (121, 'Marketing'),(122,'Sales'),(123,'IT'),(124,'HR');
 SELECT * FROM payroll_service.employee_department;
+select * from payroll_service.employee_payroll;
+select basic_pay from employee_payroll where name='terisa'; 
+select * from employee_payroll where start between CAST('2018-01-01' AS DATE)AND DATE(NOW());
+select sum(netPay) from payroll_service.employee_payroll where gender = 'F' group by gender;
+select sum(taxablePay) from payroll_service.employee_payroll where gender = 'M' group by gender; 
+select * ,avg(basic_pay) from payroll_service.employee_payroll;
+select * ,min(basic_pay) from payroll_service.employee_payroll;
+select * ,max(basic_pay) from payroll_service.employee_payroll;
+select count(basic_pay) from payroll_service.employee_payroll;
